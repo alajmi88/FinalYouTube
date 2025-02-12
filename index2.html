@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Video</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <!-- ناف اللاب -->
+    <nav class="flex justify-between items-center h-16 w-full p-4 hidden sm:flex"> 
+        <div class="menu w-8 h-8">
+            <img class="menuicon" src="menu.jpg" alt="Menu Icon">
+        </div>
+
+        <div class="logo w-28 h-16 pt-4">
+            <img class="logoicon" src="youtube.png" alt="youtube logo Icon">
+        </div>
+
+        <div class="relative w-5/12">
+            <input
+                type="text"
+                placeholder="Search"
+                class="w-full p-3 pr-16 border-2 border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <div class="absolute right-12 top-1/2 transform -translate-y-1/2 h-8 w-px bg-gray-200"></div>
+            <img src="search.png" alt="Search Icon" class="absolute right-3 top-1/2 transform -translate-y-1/2 w-6 h-6 cursor-pointer">
+        </div>
+
+        <div class="micr flex items-center justify-center bg-gray-200 p-3 rounded-full w-12 h-12">
+            <img class="micricon w-8 h-8" src="micr.png" alt="microphone logo Icon">
+        </div>
+
+        <div class="plus flex items-center justify-center bg-gray-200 p-3 rounded-full w-32 h-12 gap-4">
+            <img class="plusicon w-8 h-8" src="plus.png" alt="plus sign for the Create part">
+            <p class="create text-xl">Create</p>
+        </div>
+
+        <div class="notification">
+            <img class="notificationicon w-8 h-8" src="notif.png" alt="notification Icon">
+        </div>
+
+        <div class="profile">
+            <img class="profileicon w-12 h-12 rounded-full" src="profile.jpg" alt="user's profile">
+        </div>
+    </nav>
+
+    <!-- ناف الجوال -->
+    <nav class="flex justify-between items-center h-12 w-full p-4 sm:hidden"> 
+        <div class="menu w-8 h-8">
+            <img class="menuicon" src="menu.jpg" alt="Menu Icon">
+        </div>
+
+        <div class="logo w-20 h-12 pt-2">
+            <img class="logoicon" src="youtube.png" alt="youtube logo Icon">
+        </div>
+
+        <div class="relative w-5/12">
+            <input
+                type="text"
+                placeholder="Search"
+                class="w-full p-2 pr-8 border-2 border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <img src="search.png" alt="Search Icon" class="absolute right-2 top-1/2 transform -translate-y-1/2 w-5 h-5 cursor-pointer">
+        </div>
+
+        <div class="profile">
+            <img class="profileicon w-10 h-10 rounded-full" src="profile.jpg" alt="user's profile">
+        </div>
+    </nav>
+
+
+        <!--خلصنا الناف الحين الفيديو و التعليقات و المقترحات-->
+        <!--نفس الجزئية بس كفوتر في شاشة الجوال-->
+        <div class="block sm:hidden fixed bottom-0 left-0 w-full bg-white shadow-lg">
+            <div class="flex justify-around py-4 px-2">
+                <div class="barpics hover:bg-gray-200 px-2 cursor-pointer rounded-lg flex flex-col items-center">
+                    <img class="w-10 h-10" src="Home.png" alt="Home">
+                    <p class="text-xs">Home</p>
+                </div>
+                <div class="barpics hover:bg-gray-200 px-2 cursor-pointer rounded-lg flex flex-col items-center">
+                    <img class="w-10 h-10" src="Shorts.png" alt="Shorts">
+                    <p class="text-xs">Shorts</p>
+                </div>
+                <div class="barpics hover:bg-gray-200 px-2 cursor-pointer rounded-lg flex flex-col items-center">
+                    <img class="w-10 h-10" src="Subscription.png" alt="Subscription">
+                    <p class="text-xs">Subscription</p>
+                </div>
+                <div class="barpics hover:bg-gray-200 px-2 cursor-pointer rounded-lg flex flex-col items-center">
+                    <img class="w-10 h-10" src="You.png" alt="You">
+                    <p class="text-xs">You</p>
+                </div>
+            </div>
+        </div>
+
+        <!--الفيديو بس للفون-->
+        <div class="lg:hidden w-full pl-4 pr-4">
+            <!-- Video Player (Full width on mobile) -->
+            <div class="video-player mb-6">
+                <video class="w-full h-auto rounded-lg" controls>
+                    <source src="thevideo.mp4" type="video/mp4">
+                </video>
+            </div>
+        
+            <!-- Channel Details -->
+            <div class="video-details mb-1">
+                <h2 class="text-lg font-semibold mb-2">محمد بن سلمان : همة السعوديين مثل جبل طويق ولن تنكسر</h2>
+                <div class="flex items-center gap-4 mb-1">
+                    <img src="channel3.png" alt="Channel Logo" class="w-10 h-10 rounded-full mr-3">
+                    <div class="flex-col">
+                        <p class="text-sm text-black font-bold">Alarabiya العربية</p>
+                        <p class="text-sm text-gray-500">17.1 M subscribers</p>
+                    </div>
+                </div>
+                <!-- Views and Date -->
+                <div class="flex items-center space-x-4 text-xs text-gray-500 mb-1">
+                    <p class="text-black font-semibold">487,197 views</p>
+                    <p class="text-black font-semibold">Oct 24, 2018</p>
+                </div>
+            </div>
+        
+            <!-- Single Comment -->
+            <div class="bg-white p-4 rounded-lg mb-2">
+                <div class="flex items-center mb-1">
+                    <img src="profile1.jpg" alt="Profile Picture" class="w-10 h-10 rounded-full mr-3">
+                    <div>
+                        <p class="font-semibold text-sm">@ره-ف7</p>
+                        <p class="text-xs text-gray-500">1 year ago</p>
+                    </div>
+                </div>
+        
+                <!-- Comment -->
+                <p class="text-gray-800 text-sm mb-2">من الفخر قاعدة اعيد الفديو الله يخليكم لنا ويطول اعماركم ❤❤</p>
+        
+                <!-- Like/Dislike buttons -->
+                <div class="flex items-center space-x-4 text-xs text-gray-500">
+                    <button class="flex items-center space-x-1">
+                        <img src="likes.png" alt="Like" class="w-3 h-3">
+                        <span>20</span>
+                    </button>
+        
+                    <button class="flex items-center space-x-1">
+                        <img src="dislikes.png" alt="Dislike" class="w-3 h-3">
+                        <span></span>
+                    </button>
+                    <p class="font-bold text-black"> Reply </p>
+                </div>
+            </div>
+        </div>
+
+        <!--قسم الفيديوهات المقترحة جوال -->
+        <div class="lg:hidden w-full p-4 ">
+            <!-- Suggested Video 1 -->
+            <div class="suggested-item flex flex-col mb-8">
+                <img src="video1.jpg" alt="Suggested Video 1" class="w-full h-48 rounded-lg mb-4">
+                <div>
+                    <h3 class="text-md font-semibold">كيف تنجح العلاقات مع ياسر الحزيمي | بودكاست فنجان</h3>
+                    <p class="text-sm text-gray-600">إذاعة ثمانية</p>
+                    <p class="text-sm text-gray-500">135M views • 2 days ago</p>
+                </div>
+            </div>
+        
+            <!-- Suggested Video 2 -->
+            <div class="suggested-item flex flex-col mb-8">
+                <img src="video2.jpg" alt="Suggested Video 2" class="w-full h-48 rounded-lg mb-4">
+                <div>
+                    <h3 class="text-md font-semibold">بودكاست أريـــكة # 301 - سوالف سفرات الصيف + أخطر الدول للسياحة</h3>
+                    <p class="text-sm text-gray-600">أريكة</p>
+                    <p class="text-sm text-gray-500">1M views • 5 days ago</p>
+                </div>
+            </div>
+        
+            <!-- Suggested Video 3 -->
+            <div class="suggested-item flex flex-col mb-8">
+                <img src="video4.png" alt="Suggested Video 4" class="w-full h-48 rounded-lg mb-4">
+                <div>
+                    <h3 class="text-md font-semibold">بدر بن عبدالمحسن | ناي</h3>
+                    <p class="text-sm text-gray-600">'ع</p>
+                    <p class="text-sm text-gray-500">152K views • 1 week ago</p>
+                </div>
+            </div>
+        
+            <!-- Suggested Video 4 -->
+            <div class="suggested-item flex flex-col mb-8">
+                <img src="video5.jpg" alt="Suggested Video 5" class="w-full h-48 rounded-lg mb-4">
+                <div>
+                    <h3 class="text-md font-semibold">ملكني بين ترغيبه وترهيبه يفارقني وهو واقف على بابي • مساء الخير - محمد عبده</h3>
+                    <p class="text-sm text-gray-600">7oot 🎶</p>
+                    <p class="text-sm text-gray-500">1.2M views • 3 weeks ago</p>
+                </div>
+            </div>
+        
+            <!-- Suggested Video 5 -->
+            <div class="suggested-item flex flex-col mb-8">
+                <img src="video6.jpg" alt="Suggested Video 6" class="w-full h-48 rounded-lg mb-4">
+                <div>
+                    <h3 class="text-md font-semibold">تتويج الهلال ببطولة كأس الدرعية للسوبر السعوديSaudi Super Cup Celebrations! 💙</h3>
+                    <p class="text-sm text-gray-600">AlHilal Saudi Club</p>
+                    <p class="text-sm text-gray-500">60K views • 1 month ago</p>
+                </div>
+            </div>
+        
+            <!-- Suggested Video 6 -->
+            <div class="suggested-item flex flex-col mb-8">
+                <img src="video7.jpg" alt="Suggested Video 7" class="w-full h-48 rounded-lg mb-4">
+                <div>
+                    <h3 class="text-md font-semibold">فتيات القوة | بلستينا | كرتون نتورك</h3>
+                    <p class="text-sm text-gray-600">فتيات القوة | Powerpuff Girls</p>
+                    <p class="text-sm text-gray-500">7.9M views • 2 months ago</p>
+                </div>
+            </div>
+        
+            <!-- Suggested Video 7 -->
+            <div class="suggested-item flex flex-col mb-8">
+                <img src="video8.jpg" alt="Suggested Video 8" class="w-full h-48 rounded-lg mb-4">
+                <div>
+                    <h3 class="text-md font-semibold">ظهور لوفي المستوى الخامس ضد روب لوتشي | One Piece - الحلقة 1100</h3>
+                    <p class="text-sm text-gray-600">Crunchyroll</p>
+                    <p class="text-sm text-gray-500">153K views • 4 months ago</p>
+                </div>
+            </div>
+        
+            <!-- Suggested Video 8 -->
+            <div class="suggested-item flex flex-col mb-8">
+                <img src="video9.jpg" alt="Suggested Video 9" class="w-full h-48 rounded-lg mb-4">
+                <div>
+                    <h3 class="text-md font-semibold">أمسية تاريخية يغني فيها فنان العرب "صوتك يناديني"</h3>
+                    <p class="text-sm text-gray-600">MBC1</p>
+                    <p class="text-sm text-gray-500">4.7M views • 1 year ago</p>
+                </div>
+            </div>
+        
+            <!-- Suggested Video 9 -->
+            <div class="suggested-item flex flex-col mb-8">
+                <img src="video10.jpg" alt="Suggested Video 10" class="w-full h-48 rounded-lg mb-4">
+                <div>
+                    <h3 class="text-md font-semibold">شمس المعارف (٢٠٢٠) - حتكبر وحتنسى / علاء وردي</h3>
+                    <p class="text-sm text-gray-600">الأخوين قدس</p>
+                    <p class="text-sm text-gray-500">730K views • 2 years ago</p>
+                </div>
+            </div>
+        </div>
+
+
+    <div class="flex h-screen pt-10 overflow-auto">
+        
+        <!-- جزء الفيديو 60% -->
+        <div class="w-3/5 pl-24 hidden lg:block">
+            <div class="video-player mb-6">
+                <!-- باث الفيديو -->
+                <video class="w-full h-180 rounded-lg" controls>
+                    <source src="thevideo.mp4" type="video/mp4">
+                </video>
+            </div>
+    
+            <!-- وصف الفيديو - تحت الفيديو مباشرة -->
+            <div class="video-details">
+                <h2 class="text-2xl font-semibold mb-2">محمد بن سلمان : همة السعوديين مثل جبل طويق ولن تنكسر</h2>
+                <div class="flex items-center gap-8 mb-4">
+                    <img src="channel3.png" alt="Channel Logo" class="w-10 h-10 rounded-full mr-3">
+                    <div class="flex-col">
+                        <p class="text-sm text-black font-bold">Alarabiya العربية</p>
+                        <p class="text-sm text-gray-500"> 17.1 M subscribers</p>
+                    </div>
+                    <button class="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800">Subscribe </button>
+                    
+                </div>
+                <!--مريع التفاصيل و الوصف-->
+                <div class="flex flex-col bg-gray-200 rounded-xl px-4 py-4">
+                    <div class="flex items-center space-x-4 text-xs text-gray-500">
+                        <p class="text-black font text-xl">487,197 views </p>  
+                        <p class="text-black font text-xl">Oct 24, 2018</p> 
+                    </div>
+                    <p class="mt-4 text-gray-700">محمد بن سلمان : همة السعوديين مثل جبل طويق ولن تنكسر.</p>
+                    <div class="flex items-center gap-8 py-4">
+                        <img src="channel3.png" alt="Channel Logo" class="w-10 h-10 rounded-full mr-3">
+                        <div class="flex-col">
+                            <p class="text-sm text-black font-bold">Alarabiya العربية</p>
+                            <p class="text-sm text-gray-500"> 17.1 M subscribers</p>
+                        </div>
+                        
+                    </div>
+                
+                </div>
+
+                <!--التعليقات-->
+                <div class="flex flex-row gap-8 items-center pt-4 ">
+                    <p class="font-bold text-2xl"> 333 Comments</p>
+                    <img class="w-10" src="sort.png" alt="sort">
+                    <p>sort by</p>
+                </div>
+                <div class="flex">
+                    <!-- البروفايل -->
+                    <div class="profile">
+                        <img class="profileicon w-12 h-12 rounded-full" src="profile.jpg" alt="user's profile">
+                    </div>
+                    <div>
+                        <input
+                            type="text"
+                            placeholder="add a comment .."
+                            class="w-full p-3 pr-16 border-b-5 border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        />
+                    </div>                
+                </div>
+                <div class="bg-white p-4 rounded-lg  mb-4 h-full ">
+                    <div class="flex items-center mb-2">
+                        <img src="profile1.jpg" alt="Profile Picture" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <p class="font-semibold text-sm">@ره-ف7</p>
+                            <p class="text-xs text-gray-500">1 year ago</p>
+                        </div>
+                    </div>
+                
+                    <!-- الكومنت -->
+                    <p class="text-gray-800 text-sm mb-2">من الفخر قاعدة اعيد الفديو الله يخليكم لنا ويطول اعماركم ❤❤</p>
+                    <!-- اللايكات و الديسلايكات -->
+                    <div class="flex items-center space-x-4 text-xs text-gray-500">
+                        <button class="flex items-center space-x-1">
+                            <img src="likes.png" alt="Like" class="w-5 h-5">
+                            <span>20</span>
+                        </button>
+                
+                        <button class="flex items-center space-x-1">
+                            <img src="dislikes.png" alt="Dislike" class="w-5 h-5">
+                            <span></span>
+                        </button>
+                        <p class="font-bold text-black"> Reply </p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg  mb-4 h-full ">
+                    <div class="flex items-center mb-2">
+                        <img src="profile2.jpg" alt="Profile Picture" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <p class="font-semibold text-sm">@longb2</p>
+                            <p class="text-xs text-gray-500">1 year ago</p>
+                        </div>
+                    </div>
+                
+                    <!-- الكومنت -->
+                    <p class="text-gray-800 text-sm mb-2">لدى السعوديين همّه مثل جبل طويق <br>
+                        الشعب السعودي لديه همه لن تنكسر حتى <br>
+                        يتساوى جبل طويق بالارض .  <br>
+                        الله اكبر <br>
+                        انطلق ونحن معك يا حبيب الشعب</p>
+                    <!-- اللايكات و الديسلايكات -->
+                    <div class="flex items-center space-x-4 text-xs text-gray-500">
+                        <button class="flex items-center space-x-1">
+                            <img src="likes.png" alt="Like" class="w-5 h-5">
+                            <span>20</span>
+                        </button>
+                
+                        <button class="flex items-center space-x-1">
+                            <img src="dislikes.png" alt="Dislike" class="w-5 h-5">
+                            <span></span>
+                        </button>
+                        <p class="font-bold text-black"> Reply </p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg  mb-4 h-full ">
+                    <div class="flex items-center mb-2">
+                        <img src="profile3.jpg" alt="Profile Picture" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <p class="font-semibold text-sm">@احمدالعلوني-ر1ت</p>
+                            <p class="text-xs text-gray-500">1 monthe ago</p>
+                        </div>
+                    </div>
+                
+                    <!-- الكومنت -->
+                    <p class="text-gray-800 text-sm mb-2">مايعشق العالي غير قمه العليا <br>
+                        لوينحني عزمي اوتنثني ساقي <br>
+                        ان كان همتنا مثل طويق فهو السحاب الي على طويق ضله <br>
+                        يافلان شوف النجوم بالسماء العاليه </p>
+                    <!-- اللايكات و الديسلايكات -->
+                    <div class="flex items-center space-x-4 text-xs text-gray-500">
+                        <button class="flex items-center space-x-1">
+                            <img src="likes.png" alt="Like" class="w-5 h-5">
+                            <span>20</span>
+                        </button>
+                
+                        <button class="flex items-center space-x-1">
+                            <img src="dislikes.png" alt="Dislike" class="w-5 h-5">
+                            <span></span>
+                        </button>
+                        <p class="font-bold text-black"> Reply </p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg  mb-4 h-full ">
+                    <div class="flex items-center mb-2">
+                        <img src="profile4.png" alt="Profile Picture" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <p class="font-semibold text-sm">@lsaad1770</p>
+                            <p class="text-xs text-gray-500">1 year ago</p>
+                        </div>
+                    </div>
+                
+                    <!-- الكومنت -->
+                    <p class="text-gray-800 text-sm mb-2">ملكنااااا الغالي و و لي عهدنا صديق وحبيب الشعب كله انتم الداعم لأبناء هذا الوطن و ومنكم نستمد القوة و الشغف و<br>
+                         الامل دمتم فخررررًا وعزًا ، سائلين الله ان نكون فخرًا لهذا البلد العظيم  ❤️🇸🇦❤️🇸🇦❤️🇸🇦❤️🇸🇦
+
+                    </p>
+                    <!-- اللايكات و الديسلايكات -->
+                    <div class="flex items-center space-x-4 text-xs text-gray-500">
+                        <button class="flex items-center space-x-1">
+                            <img src="likes.png" alt="Like" class="w-5 h-5">
+                            <span>200</span>
+                        </button>
+                
+                        <button class="flex items-center space-x-1">
+                            <img src="dislikes.png" alt="Dislike" class="w-5 h-5">
+                            <span></span>
+                        </button>
+                        <p class="font-bold text-black"> Reply </p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg  mb-4 h-full ">
+                    <div class="flex items-center mb-2">
+                        <img src="profile5.jpg" alt="Profile Picture" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <p class="font-semibold text-sm">@الماضيالجميل-ح1ذ</p>
+                            <p class="text-xs text-gray-500">1 year ago</p>
+                        </div>
+                    </div>
+                
+                    <!-- الكومنت -->
+                    <p class="text-gray-800 text-sm mb-2">كلام من ذهب .. حفظه الله</p>
+                    <!-- اللايكات و الديسلايكات -->
+                    <div class="flex items-center space-x-4 text-xs text-gray-500">
+                        <button class="flex items-center space-x-1">
+                            <img src="likes.png" alt="Like" class="w-5 h-5">
+                            <span>200</span>
+                        </button>
+                
+                        <button class="flex items-center space-x-1">
+                            <img src="dislikes.png" alt="Dislike" class="w-5 h-5">
+                            <span></span>
+                        </button>
+                        <p class="font-bold text-black"> Reply </p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg  mb-4 h-full ">
+                    <div class="flex items-center mb-2">
+                        <img src="profile6.jpg" alt="Profile Picture" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <p class="font-semibold text-sm">@ahmedsaada8915</p>
+                            <p class="text-xs text-gray-500">2 years ago </p>
+                        </div>
+                    </div>
+                
+                    <!-- الكومنت -->
+                    <p class="text-gray-800 text-sm mb-2 text-wrap">حفظ الله المملكة العربية السعودية وبلاد الحرمين الشريفين وحفظ الله جلاله الملك وولي العهد صاحب الطموح والواعي والحريص علي تقدم بلده وحفظ الله الجيش والشرطة والشعب السعودي الاصيل والأرض المباركه وإن شاء الله قد الدنيا كلها يا مملكه ولا امريكا ولا غيرها ولو العالم كله احنا جاهزين لرد الجميل والله أبناء مصر لا تنسي في يوم اللي وقف جنب بلادنا العزيزة الغاليه مصر </p>
+                    <!-- اللايكات و الديسلايكات -->
+                    <div class="flex items-center space-x-4 text-xs text-gray-500">
+                        <button class="flex items-center space-x-1">
+                            <img src="likes.png" alt="Like" class="w-5 h-5">
+                            <span>200</span>
+                        </button>
+                
+                        <button class="flex items-center space-x-1">
+                            <img src="dislikes.png" alt="Dislike" class="w-5 h-5">
+                            <span></span>
+                        </button>
+                        <p class="font-bold text-black"> Reply </p>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+
+    
+        <!-- قسم الفيديوهات المقترحة لابتوب (40%) -->
+        <div class="w-2/5 p-4 hidden lg:block">
+            <!-- فيديو مقترح -->
+            <div class="suggested-item flex mb-8">
+                <img src="video1.jpg" alt="Suggested Video 1" class="w-52 h-32 rounded-lg mr-6">
+                <div class="flex-1">
+                    <h3 class="text-lg font-semibold">كيف تنجح العلاقات مع ياسر الحزيمي | بودكاست فنجان</h3>
+                    <p class="text-md text-gray-600">إذاعة ثمانية</p>
+                    <p class="text-md text-gray-500">135M views • 2 days ago</p>
+                </div>
+            </div>
+
+            <!-- فيديو مقترح -->
+            <div class="suggested-item flex mb-8">
+                <img src="video2.jpg" alt="Suggested Video 2" class="w-52 h-32 rounded-lg mr-6">
+                <div class="flex-1">
+                    <h3 class="text-lg font-semibold">بودكاست أريـــكة # 301 - سوالف سفرات الصيف + أخطر الدول للسياحة</h3>
+                    <p class="text-md text-gray-600">أريكة</p>
+                    <p class="text-md text-gray-500">1M views • 5 days ago</p>
+                </div>
+            </div>
+
+            <!-- فيديو مقترح -->
+            <div class="suggested-item flex mb-8">
+                <img src="video4.png" alt="Suggested Video 4" class="w-52 h-32 rounded-lg mr-6">
+                <div class="flex-1">
+                    <h3 class="text-lg font-semibold">بدر بن عبدالمحسن | ناي</h3>
+                    <p class="text-md text-gray-600">'ع</p>
+                    <p class="text-md text-gray-500">152K views • 1 week ago</p>
+                </div>
+            </div>
+
+            <!-- فيديو مقترح -->
+            <div class="suggested-item flex mb-8">
+                <img src="video5.jpg" alt="Suggested Video 5" class="w-52 h-32 rounded-lg mr-6">
+                <div class="flex-1">
+                    <h3 class="text-lg font-semibold">ملكني بين ترغيبه وترهيبه يفارقني وهو واقف على بابي • مساء الخير - محمد عبده</h3>
+                    <p class="text-md text-gray-600">7oot 🎶</p>
+                    <p class="text-md text-gray-500">1.2M views • 3 weeks ago</p>
+                </div>
+            </div>
+
+            <!-- فيديو مقترح -->
+            <div class="suggested-item flex mb-8">
+                <img src="video6.jpg" alt="Suggested Video 6" class="w-52 h-32 rounded-lg mr-6">
+                <div class="flex-1">
+                    <h3 class="text-lg font-semibold">تتويج الهلال ببطولة كأس الدرعية للسوبر السعوديSaudi Super Cup Celebrations! 💙</h3>
+                    <p class="text-md text-gray-600">AlHilal Saudi Club</p>
+                    <p class="text-md text-gray-500">60K views • 1 month ago</p>
+                </div>
+            </div>
+
+            <!-- فيديو مقترح -->
+            <div class="suggested-item flex mb-8">
+                <img src="video7.jpg" alt="Suggested Video 7" class="w-52 h-32 rounded-lg mr-6">
+                <div class="flex-1">
+                    <h3 class="text-lg font-semibold">فتيات القوة | بلستينا | كرتون نتورك</h3>
+                    <p class="text-md text-gray-600">فتيات القوة | Powerpuff Girls</p>
+                    <p class="text-md text-gray-500">7.9M views • 2 months ago</p>
+                </div>
+            </div>
+
+            <!-- فيديو مقترح -->
+            <div class="suggested-item flex mb-8">
+                <img src="video8.jpg" alt="Suggested Video 8" class="w-52 h-32 rounded-lg mr-6">
+                <div class="flex-1">
+                    <h3 class="text-lg font-semibold">ظهور لوفي المستوى الخامس ضد روب لوتشي | One Piece - الحلقة 1100</h3>
+                    <p class="text-md text-gray-600">Crunchyroll</p>
+                    <p class="text-md text-gray-500">153K views • 4 months ago</p>
+                </div>
+            </div>
+
+            <!-- فيديو مقترح -->
+            <div class="suggested-item flex mb-8">
+                <img src="video9.jpg" alt="Suggested Video 9" class="w-52 h-32 rounded-lg mr-6">
+                <div class="flex-1">
+                    <h3 class="text-lg font-semibold">أمسية تاريخية يغني فيها فنان العرب "صوتك يناديني"</h3>
+                    <p class="text-md text-gray-600">MBC1</p>
+                    <p class="text-md text-gray-500">4.7M views • 1 year ago</p>
+                </div>
+            </div>
+
+            <!-- فيديو مقترح -->
+            <div class="suggested-item flex mb-8">
+                <img src="video10.jpg" alt="Suggested Video 10" class="w-52 h-32 rounded-lg mr-6">
+                <div class="flex-1">
+                    <h3 class="text-lg font-semibold">شمس المعارف (٢٠٢٠) - حتكبر وحتنسى / علاء وردي</h3>
+                    <p class="text-md text-gray-600">الأخوين قدس</p>
+                    <p class="text-md text-gray-500">730K views • 2 years ago</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    
+    
+</body>
+</html>
